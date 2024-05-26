@@ -30,6 +30,10 @@ public class AddIfMax extends Command {
                     ", получено: " + args.length;
         }
 
+        if (object == null){
+            return "Неверные аргументы";
+        }
+
         LabWork labWork = (LabWork) object;
 
         boolean res = labWorkService.addIfMax(labWork);

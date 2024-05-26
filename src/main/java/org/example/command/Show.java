@@ -5,6 +5,8 @@ import org.example.service.LabWorkService;
 import org.example.service.LabWorkServiceImpl;
 import org.example.utils.NameUtil;
 
+import java.util.LinkedHashSet;
+
 /**
  *
  * Команда вывода всех элементов коллекции
@@ -32,7 +34,13 @@ public class Show extends Command {
 
         String stringCollection = "";
 
-        for (LabWork labWork: labWorkService.getCollection()){
+        LinkedHashSet<LabWork> collection = labWorkService.getCollection();
+
+        if (collection.isEmpty()){
+            return "Коллекция пуста";
+        }
+
+        for (LabWork labWork: collection){
             stringCollection += labWork;
         }
 

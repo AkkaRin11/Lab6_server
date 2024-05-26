@@ -32,6 +32,10 @@ public class Update extends Command {
                     ", получено: " + args.length;
         }
 
+        if (object == null){
+            return "Неверные аргументы";
+        }
+
         if (checkIntNumber(args[0])) {
 
             int id = Integer.parseInt(args[0]);

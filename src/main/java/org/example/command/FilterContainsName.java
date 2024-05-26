@@ -34,6 +34,10 @@ public class FilterContainsName extends Command {
 
         LinkedHashSet<LabWork> filteredCollection = labWorkService.getCollectionByContainsName(args[0]);
 
+        if (filteredCollection.isEmpty()){
+            return "Нет элементов подходящий под описание";
+        }
+
         String stringFilteredCollection = "";
 
         for (LabWork labWork: filteredCollection){

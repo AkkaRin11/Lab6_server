@@ -41,6 +41,10 @@ public class FilterGreaterThanMinimalPoint extends Command {
             LinkedHashSet<LabWork> filteredCollection =
                     labWorkService.getCollectionByGreaterMinimalPoint(minimalPoint);
 
+            if (filteredCollection.isEmpty()){
+                return "Нет элементов подходящий под описание";
+            }
+
             String stringFilteredCollection = "";
 
             for (LabWork labWork: filteredCollection){

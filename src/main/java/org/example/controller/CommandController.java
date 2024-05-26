@@ -31,7 +31,6 @@ public class CommandController {
         commands.put("info", new Info());
         commands.put("remove_by_id", new RemoveById());
         commands.put("remove_greater", new RemoveGreater());
-        commands.put("save", new Save());
         commands.put("show", new Show());
         commands.put("sum_of_average_point", new SumOfAveragePoint());
         commands.put("update", new Update());

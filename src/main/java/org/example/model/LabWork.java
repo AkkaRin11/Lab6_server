@@ -37,6 +37,6 @@ public class LabWork implements Serializable {
                 "\n" + "Author Birthday: " + getAuthor().getBirthday().toString()+
                 "\n" + "Author Height: " + getAuthor().getHeight()+
                 "\n" + "Author HairColor: " + getAuthor().getHairColor().name()+
-                "\n" + "Author Nationality: " + getAuthor().getNationality().name();
+                "\n" + "Author Nationality: " + getAuthor().getNationality().name() + "\n";
     }
 }

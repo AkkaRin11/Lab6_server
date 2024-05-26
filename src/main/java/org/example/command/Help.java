@@ -28,7 +28,7 @@ public class Help extends Command {
 
         String stringAnswer = "";
         for (Map.Entry<String, Command> entry : CommandController.getCommands().entrySet()) {
-            stringAnswer += entry.getValue().toString();
+            stringAnswer += entry.getValue().toString() + "\n";
         }
 
         return stringAnswer;

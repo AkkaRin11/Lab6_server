@@ -31,6 +31,10 @@ public class Add extends Command {
                     ", получено: " + args.length;
         }
 
+        if (object == null){
+            return "Неверные аргументы";
+        }
+
         LabWork lb = (LabWork) object;
 
 
