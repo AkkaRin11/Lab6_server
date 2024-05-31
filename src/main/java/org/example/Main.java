@@ -9,14 +9,14 @@ public class Main {
     public static void main(String[] args) {
 
         NameUtil nameUtil = NameUtil.getInstance();
-        nameUtil.setName("src/main/java/org/example/data/lab6.json");
+        nameUtil.setName("lab6.json");
 
         TCPServer tcpServer = new TCPServer();
         try {
             tcpServer.openConnection();
             tcpServer.run();
         } catch (IOException e) {
-            System.out.println("Сервер завершил непредвиденно завершил свою работу");
+            System.out.println("Сервер непредвиденно завершил свою работу");
         }
 
     }

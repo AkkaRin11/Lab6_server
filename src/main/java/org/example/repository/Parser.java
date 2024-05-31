@@ -88,9 +88,6 @@ public class Parser {
 
 
     public boolean save(LinkedHashSet<LabWork> labWorks) {
-        if (!programStateController.getIsFileValid()) {
-            return false;
-        }
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.registerModule(new JSR310Module());
@@ -103,25 +100,12 @@ public class Parser {
             return false;
         }
 
-        if (programStateController.getIsFileDev()){
-            try {
-                File file = new File(fileName + ".txt");
-                file.createNewFile();
-
-                FileWriter writer = new FileWriter(fileName + ".txt");
-                writer.write(jsonStr);
-                writer.close();
-            } catch (IOException e) {
-                return false;
-            }
-        } else {
-            try {
-                FileWriter writer = new FileWriter(fileName);
-                writer.write(jsonStr);
-                writer.close();
-            } catch (IOException e) {
-                return false;
-            }
+        try {
+            FileWriter writer = new FileWriter(fileName);
+            writer.write(jsonStr);
+            writer.close();
+        } catch (IOException e) {
+            return false;
         }
 
         return true;

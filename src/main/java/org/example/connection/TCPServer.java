@@ -21,7 +21,7 @@ public class TCPServer {
     private ByteBuffer buffer;
 
     private static final String HOST = "localhost";
-    private static final int PORT = 8080;
+    private static final int PORT = 2000;
 
     private ServerSocketChannel serverSocketChannel;
     private Selector selector;
